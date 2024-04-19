@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public class Person {
     private int id;
     private String name;
@@ -79,6 +81,23 @@ public class Person {
 
         return formattedNameBuilder.toString();
     }
+
+
+    // Method to compare if properties are the same
+    public boolean equals(Object o){
+        if (this == o){
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        Person otherPerson = (Person) o;
+
+        return getName().equals(otherPerson.getName())
+                && getAge() == otherPerson.getAge()
+                && getOccupation().equals(otherPerson.getOccupation());
+    }
+
 
     // Method to display the person's details
     @Override
