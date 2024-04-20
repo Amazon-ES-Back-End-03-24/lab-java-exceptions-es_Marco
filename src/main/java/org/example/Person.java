@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.Objects;
-
 public class Person {
     private int id;
     private String name;
@@ -56,7 +54,7 @@ public class Person {
 
 
     // Method -> Camel case formatter
-    private String formatName(String name) {
+    public static String formatName(String name) {
 
         // Remove space, capitalize each part
         String[] nameParts = name.trim().split("\\s+");
